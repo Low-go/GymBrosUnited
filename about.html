@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <title>About</title>
+    <meta charset ="UTF-8">
+    <meta name="author" content="Lorran G.">
+    <meta name="description" content="Gym bros fitness Center United. Health and well being">
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
+    <link rel="icon" href="icons/favicon.ico" type="image/favicon.ico">
+</head>
+<body class="page5parent">
+
+    <header class="header">
+        
+        <h2>GYM BROS UNITED </h2> 
+        <img src="images/weight(1).jpg" class="logo-image" alt="gym logo">
+        
+        <nav>
+            <ul class="menu">
+                 <li><a href=begin.html>HOME</a></li>
+                <li><a href="programs.html">PROGRAMS</a></li>
+                <li><a href="facility.html">FACILITY</a></li>
+                <li><a href="fitness-tips.html"> FITNESS TIPS</a></li>
+                <li><a href="events.html">EVENTS</a></li>
+                <li><a href="about.html"> ABOUT</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+            <button class="hamburger">
+
+                <i class="menuIcon material-icons">menu</i>
+                <i class="closeIcon material-icons">close</i>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+    <section class="backtrack">
+        <img src="images/facility.jpg" alt="Outside of gym">
+    </section>
+    <section class="page5">
+        <img src="images/group.jpg" alt="Gym group smiling at camera">
+        <h2> ABOUT US </h2>
+        <p> &nbsp;&nbsp; Established in 1995 by our visionary founder, Gym Bros United has been a pillar of the fitness community for over two decades. What started as a passion project has grown into a renowned fitness destination that continues to inspire and transform lives.<br><br>
+
+            &nbsp;&nbsp;Our founder, Jeremiah Smith, envisioned a place where individuals could come together, push their limits, and achieve their fitness goals. With a deep understanding of the transformative power of exercise, Jeremiah created Gym Bros United as a haven for those seeking a supportive and motivating environment.<br><br>
+
+            &nbsp;&nbsp;Since our inception, we have remained committed to providing top-notch facilities, personalized training programs, and a sense of belonging that sets us apart. Our team of dedicated trainers and staff are passionate about helping you unleash your full potential, guiding you every step of the way.<br><br>
+
+            &nbsp;&nbsp;At Gym Bros United, we believe that fitness is more than just physical exercise; it's a way of life. We have witnessed countless success stories and seen firsthand how fitness can improve not only your physical health but also your mental well-being. We are here to inspire and support you on your journey to a healthier, happier you.<br><br></p>
+
+            Check out one of our partners: <a href="https://www.lafitness.com/Pages/Default.aspx">LA Fitness</a>
+        
+    </section>
+    </main>
+
+    <footer>
+     
+        <h4>GYM BROS UNITED</h4>
+        <p><i>All Rights Reserved</i></p>
+        <p>Privacy Notice | Agreements | Contract issues</p>
+       
+    </footer>
+
+    <script>
+        const menu = document.querySelector(".menu");
+        const menuItems = document.querySelectorAll(".menuItem");
+        const hamburger= document.querySelector(".hamburger");
+        const closeIcon= document.querySelector(".closeIcon");
+        const menuIcon = document.querySelector(".menuIcon");
+
+        function toggleMenu() {
+        if (menu.classList.contains("showMenu")) {
+            menu.classList.remove("showMenu");
+            closeIcon.style.display = "none";
+            menuIcon.style.display = "block";
+        } else {
+            menu.classList.add("showMenu");
+            closeIcon.style.display = "block";
+            menuIcon.style.display = "none";
+        }
+        }
+        menuItems.forEach( 
+        function(menuItem) { 
+            menuItem.addEventListener("click", toggleMenu);
+        }
+)
+
+
+        hamburger.addEventListener("click", toggleMenu);
+
+    </script>
+</body>
+</html>

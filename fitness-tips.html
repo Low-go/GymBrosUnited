@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <title>Fitness-tips</title>
+    <meta charset ="UTF-8">
+    <meta name="author" content="Lorran G.">
+    <meta name="description" content="Gym bros fitness Center United. Health and well being">
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
+    <link rel="icon" href="icons/favicon.ico" type="image/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header">
+        
+        <h2>GYM BROS UNITED </h2> 
+        <img src="images/weight(1).jpg" class="logo-image" alt="gym logo">
+        
+        <nav>
+            <ul class="menu">
+                 <li><a href=begin.html>HOME</a></li>
+                <li><a href="programs.html">PROGRAMS</a></li>
+                <li><a href="facility.html">FACILITY</a></li>
+                <li><a href="fitness-tips.html"> FITNESS TIPS</a></li>
+                <li><a href="events.html">EVENTS</a></li>
+                <li><a href="about.html"> ABOUT</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+            <button class="hamburger">
+
+                <i class="menuIcon material-icons">menu</i>
+                <i class="closeIcon material-icons">close</i>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+    <section class="page4">
+        <iframe width="700" height="500" src="https://www.youtube.com/embed/WtS9nVR9ZQs" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <h3>1. Food, food and..more food</h3>
+        <p> &nbsp;&nbsp; At the top of the list and the most important advice we could give you is Nutrition, 
+            because no matter how hard you commit yorself to a solid workout; whether it be slimming down or 
+            building muscle, your diet will be the most critical assistance to your path towards your dream body.
+            A meticulously crafted diet, brimming with essential macronutrients, vitamins, and minerals, ensures 
+            the body operates like a well-oiled machine, fueling our workouts with intensity and providing the building 
+            blocks necessary for lean muscle development. Coupled with strategic timing and portion control, proper nutrition elevates endurance, strength, and stamina, paving the way for impressive gains and an enviable physique
+            <a href="https://www.cdc.gov/healthyweight/healthy_eating/index.html">Learn more about healthy eating from the CDC</a>
+        </p>
+        
+        <img src="images/water.png" alt ="water">
+        <h3>2. Hydration: Quench Your Thirst for Fitness</h3>
+        <p> &nbsp;&nbsp; Staying hydrated is key to optimizing your fitness journey. Water plays a vital role in numerous bodily functions, 
+            including regulating body temperature, lubricating joints, and aiding digestion. When you exercise, your body loses 
+            water through sweat, so it's crucial to replenish those fluids. Aim to drink at least 8 glasses of water per day, 
+            and increase your intake during intense workouts or hot weather. For added flavor and benefits, infuse your water 
+            with slices of lemon, cucumber, or mint. Hydrate well to maximize your performance and achieve your fitness goals.</p>
+
+        <h3>3. The Power of Rest and Recovery</h3>
+        <p> &nbsp;&nbsp; While pushing your limits during workouts is important, so is allowing your body adequate time to rest and recover. 
+            Sleep is a cornerstone of overall health and fitness. It's during sleep that your body repairs and rebuilds muscles, 
+            balances hormones, and consolidates memories. Aim for 7-9 hours of quality sleep each night to optimize recovery and 
+            enhance your performance. Additionally, incorporate active rest days into your routine, engaging in low-impact activities 
+            like stretching or yoga to promote flexibility, prevent injuries, and recharge your energy levels.</p>
+        
+        <img src = "images/sculpt.jpeg" alt = "Ripped sculpture">
+        <h3>5. Strength Training: Sculpt Your Body</h3>
+        <p> &nbsp;&nbsp; Incorporating strength training into your fitness routine offers a multitude of benefits. Not only does it help build lean 
+            muscle mass, but it also boosts metabolism, improves bone density, and enhances overall strength and endurance. Aim to 
+            include strength training exercises at least two to three times a week, targeting different muscle groups each session. 
+            You can use free weights, resistance bands, or even your body weight for effective workouts. Remember to maintain proper 
+            form and gradually increase the intensity and weight as you progress. Strength training is a powerful tool to sculpt and 
+            tone your body, promoting a healthy and confident you.</p>
+    </section>
+    </main>
+
+    <footer>
+     
+        <h4>GYM BROS UNITED</h4>
+        <p><i>All Rights Reserved</i></p>
+        <p>Privacy Notice | Agreements | Contract issues</p>
+       
+    </footer>
+
+    <script>
+        const menu = document.querySelector(".menu");
+        const menuItems = document.querySelectorAll(".menuItem");
+        const hamburger= document.querySelector(".hamburger");
+        const closeIcon= document.querySelector(".closeIcon");
+        const menuIcon = document.querySelector(".menuIcon");
+
+        function toggleMenu() {
+        if (menu.classList.contains("showMenu")) {
+            menu.classList.remove("showMenu");
+            closeIcon.style.display = "none";
+            menuIcon.style.display = "block";
+        } else {
+            menu.classList.add("showMenu");
+            closeIcon.style.display = "block";
+            menuIcon.style.display = "none";
+        }
+        }
+        menuItems.forEach( 
+        function(menuItem) { 
+            menuItem.addEventListener("click", toggleMenu);
+        }
+)
+
+
+        hamburger.addEventListener("click", toggleMenu);
+
+    </script>
+</body>
+</html>

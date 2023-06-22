@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <meta charset ="UTF-8">
+    <meta name="author" content="Lorran G.">
+    <meta name="description" content="Gym bros fitness Center United. Health and well being">
+
+    <title>GYM BROS</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
+    <link rel="icon" href="icons/favicon.ico" type="image/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header">
+        
+        <h2>GYM BROS UNITED </h2> 
+        <img src="images/weight(1).jpg" class="logo-image" alt="logo">
+        
+        <nav>
+            <ul class="menu">
+                <li><a href=begin.html>HOME</a></li>
+                <li><a href="programs.html">PROGRAMS</a></li>
+                <li><a href="facility.html">FACILITY</a></li>
+                <li><a href="fitness-tips.html"> FITNESS TIPS</a></li>
+                <li><a href="events.html">EVENTS</a></li>
+                <li><a href="about.html"> ABOUT</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+            <button class="hamburger">
+
+                <i class="menuIcon material-icons">menu</i>
+                <i class="closeIcon material-icons">close</i>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+
+    <section class="page1sec1">
+        <img class="lift" src="images/start-homie.jpg" alt="guy lifting weights">
+    </section>
+
+    <section class="page1sec2">
+        <img class="squat" src="images/running.jpg" alt ="man jogging">
+        <hr>
+        <div class="info-container">
+            <h2>Build Your Legacy</h2>
+            <p>Originaly built in 1995, Gym Bros United has been responsible for life changing growth and transformations 
+                among the many people who frequent our establishment. From diverse training programs, to a large facility 
+                that has it all. The only thing in the way of your dream body, is you!
+            </p>
+            <br><br><br>
+        
+                Come join us now for our summer recruitment benefit package. Includes:
+                <ul>
+                    <li>Personal trainer access; Evening times </li>
+                    <li>Snack bars and vending machin block cards</li>
+                    <li>Personal locker access</li>
+                    <li>20% discount first three months of membership</li>
+                </ul>
+            
+        </div>
+    </section>
+
+    <section class="free-trial-section">
+        <div class="image-container">
+          <img src="images/pull-up.jpg" alt="woman doing pull up">
+          <div class="overlay">
+            <h2>Try a Free Trial Today</h2>
+          </div>
+        </div>
+    </section>
+      
+    </main>
+
+    <footer>
+     
+        <h4>GYM BROS UNITED</h4>
+        <p><i>All Rights Reserved</i></p>
+        <p>Privacy Notice | Agreements | Contract issues</p>
+       
+    </footer>
+
+    <script>
+        const menu = document.querySelector(".menu");
+        const menuItems = document.querySelectorAll(".menuItem");
+        const hamburger= document.querySelector(".hamburger");
+        const closeIcon= document.querySelector(".closeIcon");
+        const menuIcon = document.querySelector(".menuIcon");
+
+        function toggleMenu() {
+        if (menu.classList.contains("showMenu")) {
+            menu.classList.remove("showMenu");
+            closeIcon.style.display = "none";
+            menuIcon.style.display = "block";
+        } else {
+            menu.classList.add("showMenu");
+            closeIcon.style.display = "block";
+            menuIcon.style.display = "none";
+        }
+        }
+        menuItems.forEach( 
+        function(menuItem) { 
+            menuItem.addEventListener("click", toggleMenu);
+        }
+)
+
+
+        hamburger.addEventListener("click", toggleMenu);
+
+    </script>
+</body>
+</html>

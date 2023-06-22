@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <meta charset ="UTF-8">
+    <meta name="author" content="Lorran G.">
+    <meta name="description" content="Gym bros fitness Center United. Health and well being">
+
+    <title>Programs</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
+    <link rel="icon" href="icons/favicon.ico" type="image/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header">
+        
+        <h2>GYM BROS UNITED </h2> 
+        <img src="images/weight(1).jpg" class="logo-image" alt="logo">
+        
+        <nav>
+            <ul class="menu">
+                <li><a href=begin.html>HOME</a></li>
+                <li><a href="programs.html">PROGRAMS</a></li>
+                <li><a href="facility.html">FACILITY</a></li>
+                <li><a href="fitness-tips.html"> FITNESS TIPS</a></li>
+                <li><a href="events.html">EVENTS</a></li>
+                <li><a href="about.html"> ABOUT</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+            <button class="hamburger">
+
+                <i class="menuIcon material-icons">menu</i>
+                <i class="closeIcon material-icons">close</i>
+            </button>
+        </nav>
+    </header>
+
+    <main class="page3">
+
+        <div class="biggest">
+            <div class="box">
+              <img src="images/zoomba.jpg" alt="zoomba">
+              <p>Powerful zoomba classes are offered every monday, wednesday, friday and saturdays from 5-9pm. Join in and get the cardio and workout you are looking
+                for with the help of our experienced trainers. Feel free to tune in to our suggestion box and send in the musics you would like for us to play so you 
+                can dance and workout during our powerhouse session.
+              </p>
+            </div>
+            <div class="box">
+              <img src="images/weights.jpg" alt="weights">
+              <p>At our gym, we provide a comprehensive range of weight training options to cater to various fitness goals. Our state-of-the-art facility is equipped 
+                with a diverse selection of weight machines designed to target specific muscle groups with precision and effectiveness. From traditional free weights 
+                to cutting-edge resistance machines, we offer a wide array of equipment to accommodate individuals of all fitness levels.</p>
+            </div>
+            <div class="box">
+              <img src="images/swimming.jpg" alt="swimming pool">
+              <p>Our gym boasts an exceptional indoor pool facility, providing a refreshing and invigorating aquatic experience. The pool offers a welcoming environment 
+                for swimmers of all levels, whether you're a beginner or an experienced swimmer. With dedicated lanes for lap swimming and ample space for water-based 
+                exercises, our indoor pool caters to various fitness needs.</p>
+            </div>
+          </div>
+          
+    </main>
+
+    <footer>
+     
+        <h4>GYM BROS UNITED</h4>
+        <p><i>All Rights Reserved</i></p>
+        <p>Privacy Notice | Agreements | Contract issues</p>
+       
+    </footer>
+
+    <script>
+        const menu = document.querySelector(".menu");
+        const menuItems = document.querySelectorAll(".menuItem");
+        const hamburger= document.querySelector(".hamburger");
+        const closeIcon= document.querySelector(".closeIcon");
+        const menuIcon = document.querySelector(".menuIcon");
+
+        function toggleMenu() {
+        if (menu.classList.contains("showMenu")) {
+            menu.classList.remove("showMenu");
+            closeIcon.style.display = "none";
+            menuIcon.style.display = "block";
+        } else {
+            menu.classList.add("showMenu");
+            closeIcon.style.display = "block";
+            menuIcon.style.display = "none";
+        }
+        }
+        menuItems.forEach( 
+        function(menuItem) { 
+            menuItem.addEventListener("click", toggleMenu);
+        }
+)
+
+
+        hamburger.addEventListener("click", toggleMenu);
+
+    </script>
+</body>
+</html>
